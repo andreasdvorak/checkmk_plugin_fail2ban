@@ -18,8 +18,32 @@ If you want to install the files from source clone the reppo as site user and ru
 # Services
 ![Services](images/services.png?raw=true "Services")
 
+# Service Details
+
 ![Service details](images/service_details.png?raw=true "Services details")
+
+## Service parameter to configure
 
 ![Parameter rule](images/parameter_rule.png?raw=true "Parameter rule")
 
-## Service parameter to configure
+# Creation of mkp
+Manifest file tmp/check_mk/fail2ban.manifest.temp
+
+```
+{'author': 'Andreas Dvorak',
+ 'description': 'Monitoring of Fail2Ban jail',
+ 'download_url': 'https://github.com/andreasdvorak/checkmk_plugin_fail2ban',
+ 'files': {'agents': ['plugins/fail2ban.sh'],
+           'cmk_addons_plugins': ['fail2ban/agent_based/fail2ban.py',
+                                  'fail2ban/rulesets/ruleset_fail2ban.py']},
+ 'name': 'fail2ban',
+ 'title': 'Fail2ban monitoring with agent plugin',
+ 'version': '1.0.0',
+ 'version.min_required': '2.3.0p23',
+ 'version.packaged': 'cmk-mkp-tool 0.2.0',
+ 'version.usable_until': None}
+```
+
+create the package
+
+    mkp package tmp/check_mk/fail2ban.manifest.temp
