@@ -1,6 +1,6 @@
 title: fail2ban
 agents: linux
-author: Jens Kuehnel <fail2ban-checkmk@jens.kuehnel.org>
+author: Jens Kuehnel <fail2ban-checkmk@jens.kuehnel.org> and Andreas Dvorak
 license: GPL
 distribution: none
 description:
