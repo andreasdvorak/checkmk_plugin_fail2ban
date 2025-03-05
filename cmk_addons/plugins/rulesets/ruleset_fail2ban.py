@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 #
-# CheckMK plugin file to create rules for the parameter
 # target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/rulesets/
+
+"""CheckMK plugin file to create rules for the parameter"""
 
 from cmk.rulesets.v1 import Title
 from cmk.rulesets.v1.form_specs import DefaultValue, DictElement, Dictionary, Integer, LevelDirection, SimpleLevels

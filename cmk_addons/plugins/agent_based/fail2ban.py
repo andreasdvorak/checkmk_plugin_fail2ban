@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 #
-# CheckMK server part of the plugin to create services from the raw data.
 # target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/agent_based/
+
+"""CheckMK server part of the plugin to create services from the raw data"""
 
 # Example for output from agent
 # ---------------------------------------------------------
@@ -25,7 +26,8 @@
 #   |- Total banned:     72
 #   `- Banned IP list:   140.245.39.158
 
-from cmk.agent_based.v2 import AgentSection, CheckPlugin, Service, Result, State, Metric, check_levels, DiscoveryResult, CheckResult, StringTable
+from cmk.agent_based.v2 import \
+     AgentSection, CheckPlugin, Service, check_levels, DiscoveryResult, CheckResult, StringTable
 
 from typing import Any, Mapping
 
