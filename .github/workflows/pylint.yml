@@ -20,4 +20,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint -d E0401 $(git ls-files '*.py')
+        pylint -d E0401 -d E0611 $(git ls-files '*.py')

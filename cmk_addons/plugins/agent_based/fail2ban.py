@@ -26,14 +26,21 @@
 #   |- Total banned:     72
 #   `- Banned IP list:   140.245.39.158
 
+from typing import Any, Mapping
 from cmk.agent_based.v2 import \
      AgentSection, CheckPlugin, Service, check_levels, DiscoveryResult, CheckResult, StringTable
-
-from typing import Any, Mapping
 
 Section = Mapping[str, Mapping[str, str]]
 
 def parse_fail2ban(string_table: StringTable) -> Section:
+    """parse data from agent check
+
+    Args:
+        string_table (StringTable): table of strings
+
+    Returns:
+        Section: sections of data
+    """
     parsed = {}
     currentjail = None
     for line in string_table:
@@ -50,7 +57,7 @@ def parse_fail2ban(string_table: StringTable) -> Section:
 
         if key == 'Status for the jail':
             currentjail = value
-            parsed[currentjail] = dict()
+            parsed[currentjail] = {}
         elif currentjail is not None:
             try:
                 parsed[currentjail][key] = int(value)
@@ -61,6 +68,17 @@ def parse_fail2ban(string_table: StringTable) -> Section:
 
 
 def discovery_fail2ban(section: Section) -> DiscoveryResult:
+    """discovery of services
+
+    Args:
+        section (Section): data
+
+    Returns:
+        DiscoveryResult: _description_
+
+    Yields:
+        Iterator[DiscoveryResult]: _description_
+    """
     for jail in section:
         yield Service(item=jail)
 
@@ -69,6 +87,7 @@ def check_fail2ban(
     params: Mapping[str, Any],
     section: Section,
 ) -> CheckResult:
+    """check the data""" 
     try:
         data = section[item]
     except KeyError:
@@ -80,15 +99,15 @@ def check_fail2ban(
         current_key = f"Currently {what}"
         total_key = f"Total {what}"
         yield from check_levels(
+            data[current_key],
             metric_name=f"current_{what}",
-            value=data[current_key],
             levels_upper=params[what],
             label=current_key,
             render_func=int,
         )
         yield from check_levels(
+            data[total_key],
             metric_name=f"total_{what}",
-            value=data[total_key],
             notice_only=True,
             label=total_key,
             render_func=int,

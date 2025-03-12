@@ -5,8 +5,10 @@
 """CheckMK plugin file to create rules for the parameter"""
 
 from cmk.rulesets.v1 import Title
-from cmk.rulesets.v1.form_specs import DefaultValue, DictElement, Dictionary, Integer, LevelDirection, SimpleLevels
-from cmk.rulesets.v1.rule_specs import CheckParameters, HostAndItemCondition, Topic
+from cmk.rulesets.v1.form_specs import \
+      DefaultValue, DictElement, Dictionary, Integer, LevelDirection, SimpleLevels
+from cmk.rulesets.v1.rule_specs import \
+      CheckParameters, HostAndItemCondition, Topic
 
 def _parameter_form():
     return Dictionary(
