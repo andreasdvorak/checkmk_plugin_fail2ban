@@ -25,7 +25,12 @@ If you want to install the files from source clone the reppo as site user and ru
 
 ![Parameter rule](images/parameter_rule.png?raw=true "Parameter rule")
 
-# Creation of mkp
+# Development
+
+## Pylint
+    pylint -d E0401 -d E0611 $(git ls-files '*.py')
+
+## Creation of mkp
 Manifest file tmp/check_mk/fail2ban.manifest.temp
 
 ```
@@ -37,8 +42,8 @@ Manifest file tmp/check_mk/fail2ban.manifest.temp
                                   'fail2ban/rulesets/ruleset_fail2ban.py']},
  'name': 'fail2ban',
  'title': 'Fail2ban monitoring with agent plugin',
- 'version': '1.0.0',
- 'version.min_required': '2.3.0p23',
+ 'version': '1.0.1',
+ 'version.min_required': '2.3.0',
  'version.packaged': 'cmk-mkp-tool 0.2.0',
  'version.usable_until': None}
 ```
