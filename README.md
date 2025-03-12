@@ -39,6 +39,7 @@ Manifest file tmp/check_mk/fail2ban.manifest.temp
  'download_url': 'https://github.com/andreasdvorak/checkmk_plugin_fail2ban',
  'files': {'agents': ['plugins/fail2ban.sh'],
            'cmk_addons_plugins': ['fail2ban/agent_based/fail2ban.py',
+                                  'fail2ban/graphing/graphing_fail2ban.py',
                                   'fail2ban/rulesets/ruleset_fail2ban.py']},
  'name': 'fail2ban',
  'title': 'Fail2ban monitoring with agent plugin',
@@ -51,3 +52,5 @@ Manifest file tmp/check_mk/fail2ban.manifest.temp
 create the package
 
     mkp package tmp/check_mk/fail2ban.manifest.temp
+
+Path to package: var/check_mk/packages_local
