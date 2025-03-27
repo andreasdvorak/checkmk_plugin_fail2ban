@@ -87,7 +87,7 @@ def check_fail2ban(
     params: Mapping[str, Any],
     section: Section,
 ) -> CheckResult:
-    """check the data""" 
+    """check the data"""
     try:
         data = section[item]
     except KeyError:

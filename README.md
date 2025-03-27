@@ -40,13 +40,17 @@ Manifest file tmp/check_mk/fail2ban.manifest.temp
  'files': {'agents': ['plugins/fail2ban.sh'],
            'cmk_addons_plugins': ['fail2ban/agent_based/fail2ban.py',
                                   'fail2ban/graphing/graphing_fail2ban.py',
-                                  'fail2ban/rulesets/ruleset_fail2ban.py']},
+                                  'fail2ban/rulesets/ruleset_fail2ban.py',
+                                  'fail2ban/rulesets/ruleset_fail2ban_bakery.py'],
+            'lib': ['local/lib/check_mk/base/cee/plugins/bakery/fail2ban_bakery.py']
+           },
  'name': 'fail2ban',
  'title': 'Fail2ban monitoring with agent plugin',
- 'version': '1.0.1',
+ 'version': '1.1.0',
  'version.min_required': '2.3.0',
  'version.packaged': 'cmk-mkp-tool 0.2.0',
- 'version.usable_until': None}
+ 'version.usable_until': None
+}
 ```
 
 create the package
