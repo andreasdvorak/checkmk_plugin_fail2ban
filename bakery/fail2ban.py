@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """CheckMK plugin for baker"""
-
-# ~/local/lib/check_mk/base/cee/plugins/bakery/fail2ban_bakery.py
+# ~/local/lib/check_mk/base/cee/plugins/bakery/fail2ban.py
 
 from pathlib import Path
 from typing import TypedDict
@@ -46,6 +45,6 @@ def get_fail2ban_plugin_files(conf: Fail2BanConfig) -> FileGenerator:
    )
 
 register.bakery_plugin(
-      name="fail2ban_bakery",
+      name="fail2ban",
       files_function=get_fail2ban_plugin_files,
 )

@@ -42,7 +42,7 @@ Manifest file tmp/check_mk/fail2ban.manifest.temp
                                   'fail2ban/graphing/graphing_fail2ban.py',
                                   'fail2ban/rulesets/ruleset_fail2ban.py',
                                   'fail2ban/rulesets/ruleset_fail2ban_bakery.py'],
-            'lib': ['local/lib/check_mk/base/cee/plugins/bakery/fail2ban_bakery.py']
+            'lib': ['check_mk/base/cee/plugins/bakery/fail2ban.py']
            },
  'name': 'fail2ban',
  'title': 'Fail2ban monitoring with agent plugin',

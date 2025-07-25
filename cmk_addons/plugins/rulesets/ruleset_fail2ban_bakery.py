@@ -33,6 +33,6 @@ def _parameter_form_bakery():
 rule_spec_fail2ban_bakery = AgentConfig(
     name = "fail2ban",
     title = Title("Fail2Ban (Linux)"),
-    topic = Topic.GENERAL,
+    topic = Topic.APPLICATIONS,
     parameter_form = _parameter_form_bakery,
 )
