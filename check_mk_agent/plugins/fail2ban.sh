@@ -1,8 +1,8 @@
 #!/bin/sh
 #
 # CheckMK agent plugin
-# target directory on CheckMK site: ~/local/share/check_mk/agents/plugins/
-# target directory on CheckMK agent host: /usr/lib/check_mk_agent/plugins/
+# target directory on CheckMK site: ~/local/share/check_mk/agents/plugins/fail2ban.sh
+# target directory on CheckMK agent host: /usr/lib/check_mk_agent/plugins/fail2ban.sh
 #
 
 if command -v fail2ban-client > /dev/null 2>&1; then

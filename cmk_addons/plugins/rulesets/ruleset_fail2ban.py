@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/rulesets/
+# target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/rulesets/ruleset_fail2ban.py
 
 """CheckMK plugin file to create rules for the parameter"""
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/agent_based/
+# target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/agent_based/fail2ban.py
 
 """CheckMK server part of the plugin to create services from the raw data"""
 
@@ -87,7 +87,7 @@ def check_fail2ban(
     params: Mapping[str, Any],
     section: Section,
 ) -> CheckResult:
-    """check the data""" 
+    """check the data"""
     try:
         data = section[item]
     except KeyError:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/graphing/
+# target directory: ~/local/lib/python3/cmk_addons/plugins/fail2ban/graphing/graphing_fail2ban.py
 
 """Configuration of metrics"""
 
