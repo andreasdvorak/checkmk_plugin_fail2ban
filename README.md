@@ -46,7 +46,7 @@ Manifest file tmp/check_mk/fail2ban.manifest.temp
            },
  'name': 'fail2ban',
  'title': 'Fail2ban monitoring with agent plugin',
- 'version': '1.1.0',
+ 'version': '1.1.1',
  'version.min_required': '2.3.0',
  'version.packaged': 'cmk-mkp-tool 0.2.0',
  'version.usable_until': None
