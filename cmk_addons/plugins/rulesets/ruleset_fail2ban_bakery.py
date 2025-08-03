@@ -25,7 +25,7 @@ def _parameter_form_bakery():
                     label = Label("Interval for collecting data"),
                     displayed_magnitudes = [TimeMagnitude.SECOND, TimeMagnitude.MINUTE],
                     prefill = DefaultValue(300.0),
-               )
+                )
             )
         }
     )

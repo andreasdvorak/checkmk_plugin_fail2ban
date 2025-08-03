@@ -21,7 +21,7 @@ class Fail2BanConfig(TypedDict, total=False):
        TypedDict (_type_): _description_
        total (bool, optional): _description_. Defaults to False.
     """
-    interval: int
+    interval: float
 
 def get_fail2ban_plugin_files(conf: Fail2BanConfig) -> FileGenerator:
     """defintion what to put in agent
@@ -41,8 +41,8 @@ def get_fail2ban_plugin_files(conf: Fail2BanConfig) -> FileGenerator:
       base_os=OS.LINUX,
       source=Path('fail2ban.sh'),
       target=Path('fail2ban.sh'),
-      interval=interval,
-   )
+      interval = int(interval),
+    )
 
 register.bakery_plugin(
       name="fail2ban",
