@@ -1,3 +1,6 @@
+# Version 1.1.1
+fix the asynchron interval time
+
 # Version 1.1.0
 added bakery
 
